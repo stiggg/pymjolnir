@@ -6,8 +6,8 @@ import numpy as np
 from pymjolnir.mjolnir import Mjolnir
 
 def command_line_parse(default_concurrencies):
-    parser = argparse.ArgumentParser(description='Website load tester: Wraps ab to load test website '
-                                                 'with different number of concurrent users.')
+    parser = argparse.ArgumentParser(description='Wraps "ab" (Apache HTTP server benchmarking tool) to '
+                                                 'load test website with different number of concurrent users.')
     parser.add_argument('-o', '--output', nargs='?', type=argparse.FileType('w'),
                         default=sys.stdout, help='output file')
     parser.add_argument('-c', '--concurrencies', nargs='*', type=int,
